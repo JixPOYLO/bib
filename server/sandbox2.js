@@ -1,14 +1,14 @@
 /* eslint-disable no-console, no-process-exit */
-const michelin = require('./michelin');
+const maitre = require('./maitre');
 
-async function sandbox (searchLink = 'https://guide.michelin.com/fr/fr/occitanie/albi/restaurant/la-table-du-sommelier145') {
+async function sandbox2 (searchLink = 'https://www.maitresrestaurateurs.fr/annuaire/recherche') {
   try {
     console.log(`🕵️‍♀️  browsing ${searchLink} source`);
 
-    const restaurant = await michelin.scrapeRestaurant(searchLink);
+    const restaurant = await maitre.scrapeRestaurant(searchLink);
 
     console.log(restaurant);
-    console.log('done');
+    console.log('done for maitre');
     process.exit(0);
   } catch (e) {
     console.error(e);
@@ -18,4 +18,4 @@ async function sandbox (searchLink = 'https://guide.michelin.com/fr/fr/occitanie
 
 const [,, searchLink] = process.argv;
 
-sandbox(searchLink);
+sandbox2(searchLink);
