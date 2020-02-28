@@ -1,8 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-
-
 /**
  * 
  * Parse webpage restaurant
@@ -13,7 +11,7 @@ const parse = data => {
   const $ = cheerio.load(data);
   var linkrestolist =[];
   
-  for (let i=1; i<22; i++)
+  for (let i=1; i<42; i++)
   {
     var linkresto = $('body > main > section.section-main.search-results.search-listing-result > div > div > div.row.restaurant__list-row.js-toggle-result.js-geolocation > div:nth-child('+i+') > div > a').attr("href");
     //console.log(name);
