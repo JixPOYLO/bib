@@ -306,6 +306,15 @@
   ],
   "tel": "0143573378"
 },{
+  "name": "La Merenda",
+  "address": [
+    "4 rue Raoul-Bosio",
+    " Nice",
+    " 06000",
+    " France"
+  ],
+  "tel": "0493607705"
+},{
   "name": "Le Rabelais",
   "address": [
     "8 rue Auguste-Fabre",
@@ -404,6 +413,15 @@
     " France"
   ],
   "tel": "0474670468"
+},{
+  "name": "L'Arum",
+  "address": [
+    "21 avenue Joseph-Clotis",
+    " Hyères",
+    " 83400",
+    " France"
+  ],
+  "tel": "0483994204"
 },{
   "name": "Manoir de la Pommeraie",
   "address": [

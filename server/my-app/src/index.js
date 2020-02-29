@@ -6,7 +6,6 @@ import './App.css';
 import styles from './mystyle.module.css'; 
 
 ReactDOM.render(<p className={styles.bigblue}> the Project by JixPOYLO </p>, document.getElementById('sandy'));
-console.log("hey")
 ReactDOM.render(<App />, document.getElementById('root'));
 
-//
+console.log("jix");
