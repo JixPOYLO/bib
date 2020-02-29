@@ -14,16 +14,39 @@ let listMaitre = JSON.parse(fileMaitre);
 var listFinale = []
 listBib.forEach(element => 
     {
-       
 
         listMaitre.forEach(elem => 
             {
+                var same = new Boolean(false);
+                if ((element.tel == "0000000000" || elem.tel == "")   && element.name.toUpperCase()==elem.name.toUpperCase())
+                {
+                    //console.log("yeye")
+                    //console.log(element.name.toUpperCase())
+                    //console.log(elem.name.toUpperCase())
+                    if (element.tel == "0000000000")
+                    {
+                        element.tel = elem.tel
+                    }
+                    same = Boolean(true)
+                }
                 if (elem.tel == element.tel)
                 {
+                  //console.log("ici"+same)  
+                  same = Boolean(true)
+                  //console.log("la"+same)  
+
+                }    
+
+                if (same == true )
+                {
                   console.log(element.name + " possede les deux labels");
-                  console.log(element);
-                  listFinale.push(JSON.stringify({ name: element.name, address: element.address, tel: element.tel}, null, 2) );
-                }
+                  //console.log(element);
+                  let tab = element.address.split(',');        
+                         
+                  listFinale.push(JSON.stringify({ name: element.name, address: tab, tel: element.tel}, null, 2) );
+                }         
+
+
             })
         
     });

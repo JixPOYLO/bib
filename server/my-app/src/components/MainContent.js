@@ -9,31 +9,48 @@ class MainContent extends React.Component{
         super();
         this.state = {
 
-            restoComponents : restoData.map(resto => <RestoCard resto = {{name: resto.name, address : resto.address, tel : resto.tel } }/>)
-
+            restoComponents : restoData.map(resto => <RestoCard resto = {{name: resto.name, address : resto.address, tel : resto.tel } }/>),
+            phone : "0296232542"
         }
     }
     
-   
+    //{this.state.restoComponents} 
     render(){
-    return (
 
-        <div className="contacts">
+        let listrestos = this.state.restoComponents
+        let filteredrestos = []
+        let ttel = "u"
+        listrestos.forEach(r => {
 
-            {this.state.restoComponents}
-
-            <RestoCard
-                resto={{name:"Macdo", address:"6 rue Lassa", tel:"0127687890"}}
-                
-            />
-            <RestoCard
-                resto={{name:"KFC",address:"5 rue Moutero",tel:"0187843321"}}
-                
-            />
-
-        </div>
             
-    )
+            if (r.tel !==  "0296232542")
+            {
+                ttel = r
+
+                filteredrestos.push(r)                
+            }
+            if (ttel = "")
+            {
+                ttel="na"
+            }
+            
+        });
+
+        return (
+
+            <div className="contacts">
+              
+                <p>Result : {filteredrestos.length} Restaurants</p>
+                <p>Test tel {ttel} voila</p>
+                <hr/>
+
+                {filteredrestos}     
+
+
+            
+            </div>
+                
+         )
     }
     
     
