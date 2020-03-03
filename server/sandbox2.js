@@ -1,7 +1,4 @@
-/* eslint-disable no-console, no-process-exit */
-//const maitre = require('./maitre');
-
-const test = require('./test');
+const maitre = require('./maitre');
 const fs = require('fs');
 
 
@@ -9,7 +6,7 @@ async function sandbox2(page) {
   try {
     console.log(`jsuis a la page ` + page );
 
-    const restaurant = await test.scrapeRestaurant(page);
+    const restaurant = await maitre.scrapeRestaurant(page);
 
     console.log(restaurant);
     //console.log('done ouioui');
@@ -22,7 +19,7 @@ async function sandbox2(page) {
 
 const [,, searchLink] = process.argv;
 
-const nbdepages = 154;
+const nbdepages = 154; // ecrit en dur mais selector a aller chercher si ca se modifie sur le site
 
 async function first()
 {

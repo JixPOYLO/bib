@@ -4,7 +4,7 @@ import React from 'react';
 function Footer()  {
    
     return (
-        <footer>Application launched by JixPOYLO </footer>
+        <h1>Application launched by JixPOYLO </h1>
     )
     
 }

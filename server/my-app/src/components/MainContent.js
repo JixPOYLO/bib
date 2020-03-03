@@ -37,12 +37,14 @@ class MainContent extends React.Component{
             
         });
 
+        //<p>Test tel {ttel} voila</p> //supposed to be in the return() but it doesnt work for the moment so I let it in the comment
+
+
         return (
 
-            <div className="contacts">
+            <div >
               
                 <h3>Result : {filteredrestos.length} Restaurants</h3>
-                <p>Test tel {ttel} voila</p>
                 <hr/>
 
                 {filteredrestos}     
