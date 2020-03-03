@@ -18,7 +18,7 @@ listBib.forEach(element =>
         listMaitre.forEach(elem => 
             {
                 var same = new Boolean(false);
-                if ((element.tel == "0000000000" || elem.tel == "")   && element.name.toUpperCase()==elem.name.toUpperCase())
+                if (( elem.tel == "")   && (element.name.toUpperCase()==elem.name.toUpperCase()))
                 {
                     //console.log("yeye")
                     //console.log(element.name.toUpperCase())

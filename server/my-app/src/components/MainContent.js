@@ -2,6 +2,7 @@ import React from 'react'
 import RestoCard from './RestoCard'
 //import restoData from './example.json'
 import restoData from './restosBoth.json'
+import styles from './mystyle.module.css'; 
 
 class MainContent extends React.Component{
 
@@ -40,7 +41,7 @@ class MainContent extends React.Component{
 
             <div className="contacts">
               
-                <p>Result : {filteredrestos.length} Restaurants</p>
+                <h3>Result : {filteredrestos.length} Restaurants</h3>
                 <p>Test tel {ttel} voila</p>
                 <hr/>
 
