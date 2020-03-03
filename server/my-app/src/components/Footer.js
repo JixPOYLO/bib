@@ -7,6 +7,7 @@ function Footer()  {
         <h1>Application launched by JixPOYLO </h1>
     )
     
+    
 }
 
   export default Footer;
